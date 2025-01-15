@@ -1,0 +1,118 @@
+/* Media Queries for Responsive Design */
+
+/* Base styles (for all screen sizes) */
+.banner {
+    height: 90vh;
+    align-items: center;
+}
+
+.banner h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    margin: 20px 0 30px 0;
+}
+
+.banner p {
+    font-size: clamp(14px, 2vw, 16px);
+    margin-bottom: 20px;
+}
+
+.btn_download, .btn_view {
+    padding: clamp(8px, 2vw, 10px) clamp(12px, 3vw, 20px);
+}
+
+.contact-form {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Small Mobile Devices (up to 575px) */
+@media (max-width: 575px) {
+    header {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .pricing-col {
+        margin-bottom: 30px;
+    }
+
+    .pricing-box {
+        padding: 15px;
+    }
+}
+
+/* Large Mobile Devices (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    header {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .phone {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .pricing-col {
+        margin-bottom: 30px;
+    }
+}
+
+/* Tablets (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .banner {
+        height: 70vh;
+    }
+
+    .pricing-col {
+        margin-bottom: 20px;
+    }
+}
+
+/* Small Desktops (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .banner {
+        height: 80vh;
+    }
+}
+
+/* Large Desktops (1200px and above) */
+@media (min-width: 1200px) {
+    .banner {
+        height: 90vh;
+    }
+}
+
+/* High-resolution screens */
+@media (min-resolution: 192dpi) {
+    /* Add any high-resolution specific styles here */
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none;
+    }
+    /* Add more print-specific styles as needed */
+}
